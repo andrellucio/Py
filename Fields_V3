@@ -1,0 +1,108 @@
+#VERSÃO ATUALIZADA
+#ATUALIZAÇÃO AUTOMÁTICA 
+
+#---------------------------------------------------------------------------------------------------------------------------------
+#Para executar o programa precisa:
+
+# 1 Criar uma nova pasta e Salvar o programa com py 
+# 2 Abrir o Prompt do anaconda
+# 3 Vai até a pasta que está o arquivo salvo 
+# 4 executa o comando 
+# 5 pyinstaller programa.py 
+
+#---------------------------------------------------------------------------------------------------------------------------------                                                               
+
+
+from selenium import webdriver 
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+import time
+
+#inicia o selenium no Chrome 
+
+servico = Service(ChromeDriverManager().install())  #atualização automatica do Chrome  
+driver = webdriver.Chrome(service=servico) 
+
+
+#Armazenamento de url's
+#---------------------------#
+
+#P1.1.Meta - Vendas Distribuição Carlos       
+url1 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AIeEAM/view?queryScope=userFolders"
+
+#P2.1.Vendas - Distribuição - Mensal 2022
+url2 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AIyEAM/view?queryScope=userFolders"
+
+#P2.2.Vendas Distribuição Acumulado - Ano 2022
+url3 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AKaEAM/view?queryScope=userFolders"
+
+#P2.3.Venda Mensal Distribuição Acumulada
+url4 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AKVEA2/view?queryScope=userFolders"
+
+#P3.1.Faturamento - Distribuição - Mensal 2022
+url5 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005ALxEAM/view?queryScope=userFolders"
+
+#P4.1.Vendas - Representação - Mensal 2022
+url6 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AKkEAM/view?queryScope=userFolders"
+
+#P4.2.Vendas REPRESENTADAS Acumulado - 2022
+
+url7 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AKzEAM/view?queryScope=userFolders"
+
+#P4.3.Venda Mensal Representação Acumulada
+url8 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005ALEEA2/view?queryScope=userFolders"
+
+#
+url8 = "https://fieldsrepresenta.lightning.force.com/lightning/r/Dashboard/01Z870000005AMCEA2/view"
+
+
+
+#Código
+
+while True:
+    
+    #Executando o primeiro site
+    
+    driver.get(url1)
+    driver.fullscreen_window() 
+    time.sleep(80)
+    
+    #Executando o segundo site
+    
+    driver.get(url2)
+    driver.fullscreen_window() 
+    time.sleep(60)
+        
+    #Executando o terceiro site e Navegando por ele
+    
+    driver.get(url3)
+    driver.fullscreen_window() 
+    time.sleep(60)
+    
+        
+    
+    driver.get(url4)
+    driver.fullscreen_window() 
+    time.sleep(60)
+    
+    
+    driver.get(url5)
+    driver.fullscreen_window() 
+    time.sleep(60)
+    
+    
+    driver.get(url6)
+    driver.fullscreen_window() 
+    time.sleep(60)
+    
+    
+    driver.get(url7)
+    driver.fullscreen_window() 
+    time.sleep(60)
+    
+    
+    driver.get(url8)
+    driver.fullscreen_window() 
+    time.sleep(10)
+    
